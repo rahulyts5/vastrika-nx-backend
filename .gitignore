@@ -1,0 +1,31 @@
+# Laravel
+vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+.env.backup
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build
+bootstrap/cache/
+storage/logs/
+
+# Testing
+.phpunit.result.cache
+
+# Package managers
+composer.lock
+package-lock.json
+yarn.lock
