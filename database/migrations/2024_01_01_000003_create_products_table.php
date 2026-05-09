@@ -34,7 +34,6 @@ return new class extends Migration
             $table->index('slug');
             $table->index('featured');
             $table->index('trending');
-            $table->fullText(['name', 'description']);
         });
     }
 
