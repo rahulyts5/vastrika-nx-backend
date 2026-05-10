@@ -3,14 +3,12 @@
 return [
     'paths' => ['api/*', 'sanctum/csrf-cookie'],
     'allowed_methods' => ['*'],
-    'allowed_origins' => [
+    'allowed_origins' => array_filter([
         'http://localhost:5173',
-        'https://vastrika-nx-frontend.vercel.app',                                    // ← add this
-        'https://vastrika-nx-frontend-git-main-rahulyts5s-projects.vercel.app',
-        'https://vastrika-nx-frontend-4hjya41zn-rahulyts5s-projects.vercel.app',      // ← add this (preview URL)
-    ], 
+        env('FRONTEND_URL'),
+    ]),
     'allowed_origins_patterns' => [
-        '#^https://vastrika-nx-frontend-.*\.vercel\.app$#',   // ← covers ALL future preview URLs
+        '#^https://vastrika-nx-frontend-.*\.vercel\.app$#',
     ],
     'allowed_headers' => ['*'],
     'exposed_headers' => [],
